@@ -5,9 +5,18 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MVVMBBasic"
     xmlns:views="clr-namespace:Views"
+    FlyoutBehavior="Flyout"
     Title="MVVMBBasic">
 
+    <!-- דף הפתיחה -->
+    <FlyoutItem Title="Welcome">
+        <ShellContent
+        Title="Welcome"
+        Route="Welcome"
+        ContentTemplate="{DataTemplate views:WelcomePage}"/>
+    </FlyoutItem>
 
+    <!-- תפריט ניווט למחשבונים -->
     <FlyoutItem Title="Calculator Age">
         <ShellContent
         Title="Calculator Age"

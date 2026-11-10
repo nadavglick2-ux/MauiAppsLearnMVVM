@@ -74,6 +74,9 @@
 	  <Compile Update="Views\CalcAge.xaml.cs">
 	    <DependentUpon>CalcAge.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\Welcome.xaml.cs">
+	    <DependentUpon>Welcome.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
