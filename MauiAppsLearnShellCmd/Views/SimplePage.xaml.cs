@@ -3,6 +3,11 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace Views;
+//עבור Binding למאפיין נגדיר
+//1.את הממשק INotifyPropertyChanged
+//2. נגדיר תכונה ומאפיין
+//3. נגדיר ב XAML את ה-Binding למאפיין
+
 
 //public partial class SimplePage : ContentPage, INotifyPropertyChanged
 public partial class SimplePage : ContentPage
@@ -25,25 +30,25 @@ public partial class SimplePage : ContentPage
     //    }
     //}
 
-    public SimplePage()
+    //public SimplePage()
+    //{
+    //    InitializeComponent();
+    //    //BindingContext = this;
+    //    //MyCustomProperty = "שלום עדכון מהקוד מאחור Binding MyCustomProperty!";
+    //    //MyLabel.Text = "x:name שלום עדכון מהקוד מאחור!";
+    //}
+
+
+    public SimplePage() : this(new SimpleViewModel())
+    {
+
+
+    }
+    public SimplePage(SimpleViewModel viewModel)
     {
         InitializeComponent();
+        // הגדרת הדף הנוכחי כמקור המידע עבור ה-XAML
         //BindingContext = this;
-        //MyCustomProperty = "שלום עדכון מהקוד מאחור Binding MyCustomProperty!";
-        //MyLabel.Text = "x:name שלום עדכון מהקוד מאחור!";
+        BindingContext = viewModel;
     }
-
-
-    //   public SimplePage() : this(new SimpleViewModel())
-    //   {
-
-
-    //   }
-    //   public SimplePage(SimpleViewModel viewModel)
-    //{
-    //	InitializeComponent();
-    //       // הגדרת הדף הנוכחי כמקור המידע עבור ה-XAML
-    //       BindingContext = this;
-    //       //BindingContext = viewModel;
-    //   }
 }

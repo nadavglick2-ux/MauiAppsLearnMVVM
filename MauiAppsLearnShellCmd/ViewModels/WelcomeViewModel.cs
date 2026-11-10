@@ -11,10 +11,13 @@ namespace ViewModels
 
         public ICommand NavigateToAboutCommand { get; }
 
+        public ICommand NavigateToContactCommand { get; }
+
         public WelcomeViewModel()
         {
-            //// נווט לדף מונה לחיצות
-            //NavigateToClickCounterCommand = new Command(async () => await Shell.Current.GoToAsync("ClickCounterPage"));
+
+            // נווט לדף מונה לחיצות
+            NavigateToContactCommand = new Command(async () => await Shell.Current.GoToAsync("OnContactClicked"));
 
             //// נווט לדף אודות
             //NavigateToAboutCommand = new Command(async () => await Shell.Current.GoToAsync("AboutPage"));
@@ -33,8 +36,12 @@ namespace ViewModels
                 await Shell.Current.GoToAsync("//AboutPage");         // 2. ניווט מוחלט (Absolute)
             });
 
+        Title = "Welcome Page";
+        }
 
-            Title = "Welcome Page";
+        private async void OnContactClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("ContactPage");
         }
 
     }
