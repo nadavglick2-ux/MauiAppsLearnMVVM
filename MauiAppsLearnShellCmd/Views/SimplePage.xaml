@@ -29,9 +29,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center"       
             Text="I am a simple label"
-            x:Name="MyLabel"/>-->
-
-        
+            x:Name="MyLabel"/>-->     
 
     </VerticalStackLayout>
 

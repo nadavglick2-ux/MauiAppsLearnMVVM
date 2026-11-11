@@ -4,16 +4,17 @@ using System.Runtime.CompilerServices;
 
 namespace Views;
 
-// **For Binding property to the lable Text to XAML (Code Behind of the XAML)
+// **1. For Binding property to the lable Text to XAML (Code Behind of the XAML)
 // 1.Implement the INotifyPropertyChanged interface (interface) to notify the XAML when a property value changes
 // (public partial class SimplePage : ContentPage, INotifyPropertyChanged)
 // 2. Define Filed and Property for MyCustomProperty (in code behind) for Binding to XAML 
 // 3. Define the constructor to set the BindingContext
 // 4. BindingContext = this; // Set the BindingContext to the current instance of the page (this) so that the XAML can access the properties defined in the code behind
 // 5. Set Bindings in XAML to the Property defined in code behind
+// (instead of using x:name to reference the label directly, we use Binding to bind the Text property of the label to the MyCustomProperty defined in the code behind)
 // {Binding MyCustomProperty} in XAML will bind to the MyCustomProperty defined in code behind
 
-// **For Binding property to the lable Text to XAML (MVVM)
+// **2. For Binding property to the lable Text to XAML (MVVM)
 // 1. Create a ViewModel class (SimpleViewModel) that inerhit from BaseViewModel (which implements INotifyPropertyChanged) and define the property (MyCustomProperty) in the ViewModel class
 // 2. In the XMAL ContentPage, set link to the ViewModel class (SimpleViewModel)
 // xmlns:vm="clr-namespace:ViewModels"
