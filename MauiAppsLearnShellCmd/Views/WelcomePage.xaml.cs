@@ -15,10 +15,10 @@ namespace Views
             BindingContext = viewModel;
         }
 
-        private async void OnContactClicked(object sender, EventArgs e)
-        {
-            await Shell.Current.GoToAsync("ContactPage");
-        }
+        //private async void OnContactClicked(object sender, EventArgs e)
+        //{
+        //    await Shell.Current.GoToAsync("ContactPage");
+        //}
 
         private async void OnInternalClicked(object sender, EventArgs e)
         {

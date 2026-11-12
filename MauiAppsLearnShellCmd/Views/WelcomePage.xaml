@@ -53,8 +53,9 @@
                         HeightRequest="48"
                         Margin="0,5,0,0" />
                 <!--Command="{Binding NavigateToContactCommand}"-->
+                <!--Clicked="OnContactClicked"-->
                 <Button Text="צור קשר"
-                        Clicked="OnContactClicked"
+                        Command="{Binding NavigateToContactCommand}"
                         FontAttributes="Bold"
                         CornerRadius="8"
                         HeightRequest="48"
